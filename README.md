@@ -3,5 +3,5 @@
 <ol>
   <li>Fundamentos de Android (En clase)</li>
   <li>Java para el desarrollo de Android (En clase)</li>
-  <li><h5><b>Layouts</b><h5></li>
+  <li><b>LAYOUTS</b></li>
 </ul>
