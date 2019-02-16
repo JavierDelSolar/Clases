@@ -37,9 +37,11 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
 
         loadQuestions(getString(R.string.question_peru), true, question);
         loadQuestions(getString(R.string.question_chile), false, question);
-        loadQuestions(getString(R.string.question_colombia), false, question);
+        loadQuestions(getString(R.string.question_colombia), true, question);
 
         tvQuestion.setText(question.get(pos).getName());
+
+        btnEnabled();
     }
 
     @Override
@@ -55,21 +57,40 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
                 Toast.makeText(MainActivity.this, ans, Toast.LENGTH_SHORT).show();
                 if(pos < cantQuestion-1) {
                     pos += 1;
-                    tvQuestion.setText(question.get(pos).getName());
+                    showActualQuestion();
                 }
                 break;
             case R.id.btnPrevious:
                 if(pos > 0) {
                     pos -= 1;
-                    tvQuestion.setText(question.get(pos).getName());
+                    showActualQuestion();
+                    btnEnabled();
                 }
                 break;
             case R.id.btnNext:
                 if(pos < cantQuestion-1) {
                     pos += 1;
-                    tvQuestion.setText(question.get(pos).getName());
+                    showActualQuestion();
+                    btnEnabled();
                 }
                 break;
+        }
+    }
+
+    private void showActualQuestion(){
+        tvQuestion.setText(question.get(pos).getName());
+    }
+
+    private void btnEnabled(){
+        if(pos==0){
+            btnPrevious.setEnabled(false);
+        }else{
+            btnPrevious.setEnabled(true);
+        }
+        if(pos == question.size()-1) {
+            btnNext.setEnabled(false);
+        }else{
+            btnNext.setEnabled(true);
         }
     }
 
