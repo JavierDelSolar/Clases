@@ -58,6 +58,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
                 if(pos < cantQuestion-1) {
                     pos += 1;
                     showActualQuestion();
+                    btnEnabled();
                 }
                 break;
             case R.id.btnPrevious:
