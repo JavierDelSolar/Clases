@@ -1,3 +1,7 @@
 <resources>
     <string name="app_name">Inventory</string>
+    <string name="et_name_">Nombre</string>
+    <string name="et_description">Descripción</string>
+    <string name="et_quantity">Cantidad</string>
+    <string name="item_add">Agregar</string>
 </resources>

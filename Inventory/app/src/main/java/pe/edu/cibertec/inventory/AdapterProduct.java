@@ -32,9 +32,9 @@ public class AdapterProduct extends RecyclerView.Adapter<AdapterProduct.ProductP
     @Override
     public void onBindViewHolder(@NonNull ProductPrototype productoPrototype, int i) {
         Product product = items.get(i);
-        productoPrototype.tvName.setText(product.getName());
-        productoPrototype.tvDescription.setText(product.getDescription());
-        productoPrototype.tvQuantity.setText(product.getQuantity());
+        productoPrototype.tvName.setText(product.getName()+"");
+        productoPrototype.tvDescription.setText(product.getDescription()+"");
+        productoPrototype.tvQuantity.setText(product.getQuantity()+"");
     }
 
     // Indica la cantidad de registros en el RecyclerView
