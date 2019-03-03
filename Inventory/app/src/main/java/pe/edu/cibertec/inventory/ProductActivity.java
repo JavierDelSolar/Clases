@@ -39,6 +39,7 @@ public class ProductActivity extends AppCompatActivity {
         intent.putExtra("product_description",description);
         intent.putExtra("product_quantity",quantity);
         setResult(RESULT_OK, intent);
+        /* Pasar clase como parametro */
         finish();
         return true;
     }
